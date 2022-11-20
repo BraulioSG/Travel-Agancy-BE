@@ -15,6 +15,7 @@ router.use((req, _res, next) => {
 //HOME PATH
 router.get('/', (_req, res) => {
     res.send('hello world');
+    handlers.greeting();
 });
 
 //QUERY ROUTE
