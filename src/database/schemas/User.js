@@ -5,9 +5,9 @@ const ObjectId = Schema.ObjectId;
 //template for USER information
 const User = new Schema({
     ID: ObjectId,
-    name: { type: String, match: /[a-z]/, required: true }, //[a-z] regex expression to match only letters
-    lastName: { type: String, match: /[a-z]/, required: true },
-    age: { type: Number, min: 0, max: 99, required: true },
+    username: { type: String, required: true },
+    email: { type: String, match: /[a-z]@[a-z].[a-z]/, required: true }, //email regex expression
+    password: { type: Number, min: 0, max: 99, required: true },
 });
 
 module.exports = User;
