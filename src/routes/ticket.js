@@ -1,22 +1,13 @@
 // Todo ENDPOINT de Tickets
-
 const express = require('express');
 const router = express.Router();
+const {getTickets, getTicket, createTicket, updateTicket, deleteTicket} = require('../controllers/ticket')
 
-router.get('/', (req,res)=>{
-    res.send('Tickets endpoint')
-});
+router.get('/', getTickets);
+router.get('/', getTicket);
+router.post('/', createTicket);
+router.put('/', updateTicket);
+router.delete('/', deleteTicket);
 
-router.post('/', (req,res)=>{
-    res.send('We are creating what you asked')
-});
-
-router.put('/', (req,res)=>{
-    res.send('We are on our way to update it')
-});
-
-router.delete('/', (req,res)=>{
-    res.send('Deleting...')
-});
 
 module.exports = router;

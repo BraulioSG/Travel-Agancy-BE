@@ -1,7 +1,7 @@
 //Base de datos en Mongoose
 
 const mongoose = require('mongoose');
-const DB_URI = process.env.DB_URI;
+const DB_URI = process.env.DB_URI;   //Variable de entorno
 
 function connect() {
     mongoose

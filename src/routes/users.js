@@ -1,22 +1,12 @@
 // Todo ENDPOINT de Users
-
 const express = require('express');
 const router = express.Router();
+const {getUsers, getUser, createUser, updateUser, deleteUser} = require('../controllers/users')
 
-router.get('/', (req,res)=>{
-    res.send('Users endpoint')
-});
-
-router.post('/', (req,res)=>{
-    res.send('We are creating what you asked')
-});
-
-router.put('/', (req,res)=>{
-    res.send('We are on our way to update it')
-});
-
-router.delete('/', (req,res)=>{
-    res.send('Deleting...')
-});
+router.get('/', getUsers);
+router.get('/', getUser);
+router.post('/', createUser);
+router.put('/', updateUser);
+router.delete('/', deleteUser);
 
 module.exports = router;
