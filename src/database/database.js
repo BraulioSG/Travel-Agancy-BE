@@ -1,8 +1,11 @@
+//Base de datos en Mongoose
+
 const mongoose = require('mongoose');
+const DB_URI = process.env.DB_URI;
 
 function connect() {
     mongoose
-        .connect('mongodb://localhost:27017/travel')
+        .connect(DB_URI)
         .then(() => {
             //console.log('connection to DB: success');
             return true;
